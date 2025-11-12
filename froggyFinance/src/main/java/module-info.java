@@ -6,5 +6,9 @@ module edu.utsa.cs3443.froggyfinance {
 
 
     opens edu.utsa.cs3443.froggyfinance to javafx.fxml;
+    opens edu.utsa.cs3443.froggyfinance.controller to javafx.fxml;
+
+    // Export packages if other modules need to access them
     exports edu.utsa.cs3443.froggyfinance;
+    exports edu.utsa.cs3443.froggyfinance.controller;
 }
