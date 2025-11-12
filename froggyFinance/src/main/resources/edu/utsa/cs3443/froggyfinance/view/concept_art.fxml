@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.utsa.cs3443.froggyfinance.controller.ConceptArtController"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+    <!-- Header Label -->
+    <Label text="Concept Art" layoutX="240" layoutY="40"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <!-- Placeholder for concept art content -->
+    <Label text=" Concept Art goes here" layoutX="180" layoutY="150"
+           style="-fx-font-size: 18px;"/>
+
+    <!-- Go Back Button -->
+    <Button text="Go Back" layoutX="260" layoutY="350" onAction="#goBackToMainMenu"/>
+
+</AnchorPane>
