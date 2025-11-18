@@ -76,7 +76,7 @@ public class CreditLevelsScreen {
         root.setCenter(contentBox);
         root.setBottom(navBox);
 
-        Scene scene = new Scene(root, 500, 400);
+        Scene scene = new Scene(root, 500, 610);
         stage.setScene(scene);
         stage.show();
     }
