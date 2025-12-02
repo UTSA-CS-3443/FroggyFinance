@@ -14,6 +14,7 @@ import edu.utsa.cs3443.froggyfinance.FloatingMenu;
  * <p>
  * This screen provides navigation to the Information section or allows
  * the user to return to the {@link FloatingMenu}.
+ * @author Victoria Baladez
  */
 public class MainScreen {
 
