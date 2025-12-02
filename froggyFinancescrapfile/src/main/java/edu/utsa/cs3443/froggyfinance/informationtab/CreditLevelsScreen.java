@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.froggyfinance.informationtab;
+package edu.utsa.cs3443.informationtab;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -12,14 +12,35 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
- * Displays paged "Credit/Debit" content with next/back buttons.
+ * The {@code CreditLevelsScreen} class displays paginated educational content
+ * related to the "Credit/Debit" topic. Users can navigate through chapters
+ * using previous and next buttons, while the screen dynamically updates the
+ * displayed title and paragraph.
  */
 public class CreditLevelsScreen {
 
+    /** Manager responsible for retrieving chapter titles and paragraphs. */
     private final ContentManager contentManager = new ContentManager();
+
+    /** Tracks the currently displayed chapter (1-based index). */
     private int currentLevel = 1;
+
+    /** The topic associated with this screen's content. */
     private final String topic = "Credit/Debit";
 
+    /**
+     * Displays the Credit/Debit levels screen within the given JavaFX {@link Stage}.
+     * <p>
+     * The method builds a complete user interface containing:
+     * <ul>
+     *     <li>A header showing the topic name</li>
+     *     <li>The title and text of the current chapter</li>
+     *     <li>Navigation buttons for switching between levels</li>
+     *     <li>A back button returning to the main information menu</li>
+     * </ul>
+     *
+     * @param stage the main application window in which the screen is displayed
+     */
     public void show(Stage stage) {
         stage.setTitle(topic);
 
@@ -45,8 +66,10 @@ public class CreditLevelsScreen {
         Button prevBtn = new Button("<");
         Button nextBtn = new Button(">");
 
+        // Returns to the main information menu
         backMain.setOnAction(e -> new InformationMenu().show(stage));
 
+        // Navigate to previous level
         prevBtn.setOnAction(e -> {
             if (currentLevel > 1) {
                 currentLevel--;
@@ -54,6 +77,8 @@ public class CreditLevelsScreen {
                 paragraph.setText(contentManager.getParagraph(topic, currentLevel));
             }
         });
+
+        // Navigate to next level
         nextBtn.setOnAction(e -> {
             if (currentLevel < contentManager.getParagraphCount(topic)) {
                 currentLevel++;
