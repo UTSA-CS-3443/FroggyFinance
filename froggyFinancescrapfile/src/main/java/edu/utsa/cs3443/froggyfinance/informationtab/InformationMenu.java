@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.informationtab;
+package edu.utsa.cs3443.froggyfinance.informationtab;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -8,27 +8,30 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import edu.utsa.cs3443.froggyfinance.FloatingMenu;
 
 /**
- * The {@code InformationMenu} class represents the main menu for the information
- * section of the application. It provides navigation options for viewing
- * educational content related to Loans or Credit/Debit, as well as a button to
- * return to the main screen.
+ * The {@code InformationMenu} class represents the main information tab
+ * in the FroggyFinance application.
+ * <p>
+ * This screen provides navigation options for viewing content related to
+ * Loans or Credit/Debit. The back button returns the user to the
+ * {@link FloatingMenu}.
  */
 public class InformationMenu {
 
     /**
-     * Displays the Information Menu screen inside the given JavaFX {@link Stage}.
+     * Displays the Information Menu screen in the provided {@link Stage}.
      * <p>
-     * This screen includes:
+     * The screen includes:
      * <ul>
-     *     <li>A header label displaying the menu title</li>
-     *     <li>A button to navigate to the Loans content</li>
-     *     <li>A button to navigate to the Credit/Debit content</li>
-     *     <li>A back button returning to the application's main screen</li>
+     *     <li>A header label showing "Information Tab"</li>
+     *     <li>A button to navigate to {@link LoanLevelsScreen}</li>
+     *     <li>A button to navigate to {@link CreditLevelsScreen}</li>
+     *     <li>A back button to return to {@link FloatingMenu}</li>
      * </ul>
      *
-     * @param stage the stage in which this menu should be displayed
+     * @param stage the JavaFX window where this menu is displayed
      */
     public void show(Stage stage) {
         stage.setTitle("Information Menu");
@@ -37,6 +40,7 @@ public class InformationMenu {
         title.setFont(Font.font("Arial", 28));
         title.setStyle("-fx-font-weight: bold;");
 
+        // Buttons
         Button loansButton = new Button("Loans");
         loansButton.setPrefSize(260, 40);
         loansButton.setFont(Font.font(16));
@@ -49,10 +53,12 @@ public class InformationMenu {
         backButton.setPrefSize(260, 36);
         backButton.setFont(Font.font(14));
 
-        // Navigation actions
+        // Navigate to other screens
         loansButton.setOnAction(e -> new LoanLevelsScreen().show(stage));
         creditButton.setOnAction(e -> new CreditLevelsScreen().show(stage));
-        backButton.setOnAction(e -> new MainScreen().start(stage));
+
+        // Back button returns to existing Floating Menu
+        backButton.setOnAction(e -> FloatingMenu.reopen(stage));
 
         VBox root = new VBox(20, title, loansButton, creditButton, backButton);
         root.setAlignment(Pos.CENTER);
@@ -64,3 +70,4 @@ public class InformationMenu {
         stage.show();
     }
 }
+
