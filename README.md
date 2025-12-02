@@ -2,7 +2,8 @@
 Project for App-titude!
 
 ## **Motivation**
-Froggy Finance is built to ...
+Froggy Finance is built to help younger people (upperclassmen in high school/ starting college students)  have a better understanding of their financial decisions and the impacts of those decisions on their lives. Help to improve their financial literacy skills. Using a game to help younger people practice/ quiz on the basics of finance with credit cards, debit cards, prepaid cards and loans.
+
 
 ## **Code Style**
 The language used to write this app is **Java** with **JavaFX** for screen layouts.
