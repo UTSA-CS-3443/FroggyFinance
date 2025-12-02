@@ -17,6 +17,7 @@ import javafx.stage.Stage;
  * This screen is intended to show detailed content passed in at runtime,
  * along with a Back button that returns the user to the originating
  * parent screen (either {@link LoanLevelsScreen} or {@link CreditLevelsScreen}).
+ * @author Victoria Baladez
  */
 public class LevelContentScreen {
 
