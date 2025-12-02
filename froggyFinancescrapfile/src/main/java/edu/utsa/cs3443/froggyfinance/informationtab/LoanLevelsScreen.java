@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.froggyfinance.informationtab;
+package edu.utsa.cs3443.informationtab;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -12,14 +12,30 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
- * Displays paged "Loans" content with next/back buttons.
+ * The {@code LoanLevelsScreen} class displays multi-page instructional content
+ * for the "Loans" topic. Each page (or "level") contains a title and a paragraph
+ * of text loaded from the {@link ContentManager}.
+ * <p>
+ * Users can navigate between levels using the Next/Previous buttons, or return
+ * to the main information menu using the Back button. This class mirrors the
+ * behavior of {@link CreditLevelsScreen} but is dedicated to loan-related content.
  */
 public class LoanLevelsScreen {
 
+    /** Manages retrieval of titles and paragraphs for each level. */
     private final ContentManager contentManager = new ContentManager();
-    private int currentLevel = 1; // 1-based
+
+    /** Tracks the current page (1-based index). */
+    private int currentLevel = 1;
+
+    /** Topic identifier used when querying the ContentManager. */
     private final String topic = "Loans";
 
+    /**
+     * Displays the Loans level screen inside the provided {@link Stage}.
+     *
+     * @param stage the window where this screen is displayed
+     */
     public void show(Stage stage) {
         stage.setTitle(topic);
 
@@ -48,10 +64,10 @@ public class LoanLevelsScreen {
         Button prevBtn = new Button("<");
         Button nextBtn = new Button(">");
 
-        // Main back
+        // Return to Information Menu
         backMain.setOnAction(e -> new InformationMenu().show(stage));
 
-        // Navigation
+        // Page navigation
         prevBtn.setOnAction(e -> {
             if (currentLevel > 1) {
                 currentLevel--;
@@ -59,6 +75,7 @@ public class LoanLevelsScreen {
                 paragraph.setText(contentManager.getParagraph(topic, currentLevel));
             }
         });
+
         nextBtn.setOnAction(e -> {
             if (currentLevel < contentManager.getParagraphCount(topic)) {
                 currentLevel++;
