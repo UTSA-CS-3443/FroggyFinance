@@ -17,6 +17,7 @@ import edu.utsa.cs3443.froggyfinance.FloatingMenu;
  * This screen provides navigation options for viewing content related to
  * Loans or Credit/Debit. The back button returns the user to the
  * {@link FloatingMenu}.
+ * @author Victoria Baladez
  */
 public class InformationMenu {
 
