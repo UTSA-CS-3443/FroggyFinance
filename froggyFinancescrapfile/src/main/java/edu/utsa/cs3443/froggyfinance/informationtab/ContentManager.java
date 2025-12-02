@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.informationtab;
+package edu.utsa.cs3443.froggyfinance.informationtab;
 
 /**
  * The {@code ContentManager} class provides access to titles and paragraphs
