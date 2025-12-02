@@ -11,6 +11,7 @@ import javafx.stage.Stage;
  * The {@code ContentScreen} class represents a simple JavaFX window used to
  * display a title and a block of text content. It can function as a standalone
  * message window or as a reusable screen template within the application.
+ * @author Victoria Baladez
  */
 public class ContentScreen {
 
