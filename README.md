@@ -19,7 +19,7 @@ We used **Intellij** to code this app, **GitHub** for version control, and **Jav
 
 ## **Features**
 -
--
+- Allows you to watch a tutorial/change volume/use a calculator/ review and study for the levels in-game, all through the main menu and game menu.
 - **Froggy Finance Game** to test your knowledge on finance topics.
 
 ## **Known Issues**
@@ -36,5 +36,6 @@ This app is easy to use and user friendly.
 2. **Game Play** Use arrow keys to get to Toad hut and bank, when in hut or bank use spacebar to start questions after dialog has been read. To answer question, use keys a or b. to get to next level move sprite to bottom right of screen. To go back a level move sprite to top left of screen.
 
 ## **Credits**
-Erika Mey Project Froggy Finance Game.
-
+Erika Mey 
+Sofia Flores
+Project Froggy Finance Game.
