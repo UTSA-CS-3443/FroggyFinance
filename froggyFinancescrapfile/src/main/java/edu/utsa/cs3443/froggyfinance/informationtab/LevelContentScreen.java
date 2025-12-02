@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.froggyfinance.informationtab;
+package edu.utsa.cs3443.informationtab;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -10,10 +10,24 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
- * Shows a single information level (loans or credit) with Back navigation.
+ * The {@code LevelContentScreen} class displays a scrollable text page
+ * for a single information level, such as a loan explanation or
+ * credit/debit topic.
+ * <p>
+ * This screen is intended to show detailed content passed in at runtime,
+ * along with a Back button that returns the user to the originating
+ * parent screen (either {@link LoanLevelsScreen} or {@link CreditLevelsScreen}).
  */
 public class LevelContentScreen {
 
+    /**
+     * Displays the level content screen within the provided {@link Stage}.
+     *
+     * @param stage        the JavaFX window where the screen is shown
+     * @param title        the title/header for this information page
+     * @param content      the detailed text content to be displayed
+     * @param parentScreen the originating screen instance; used to navigate back
+     */
     public void show(Stage stage, String title, String content, Object parentScreen) {
         Label titleLabel = new Label(title);
         titleLabel.setFont(Font.font("Arial", 22));
