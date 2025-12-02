@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.froggyfinance.informationtab;
+package edu.utsa.cs3443.informationtab;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -8,14 +8,28 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import edu.utsa.cs3443.froggyfinance.FloatingMenu;
 
 /**
- * Displays the main information tab with options for Loans and Credit/Debit.
- * The back button returns to the Floating Menu.
+ * The {@code InformationMenu} class represents the main menu for the information
+ * section of the application. It provides navigation options for viewing
+ * educational content related to Loans or Credit/Debit, as well as a button to
+ * return to the main screen.
  */
 public class InformationMenu {
 
+    /**
+     * Displays the Information Menu screen inside the given JavaFX {@link Stage}.
+     * <p>
+     * This screen includes:
+     * <ul>
+     *     <li>A header label displaying the menu title</li>
+     *     <li>A button to navigate to the Loans content</li>
+     *     <li>A button to navigate to the Credit/Debit content</li>
+     *     <li>A back button returning to the application's main screen</li>
+     * </ul>
+     *
+     * @param stage the stage in which this menu should be displayed
+     */
     public void show(Stage stage) {
         stage.setTitle("Information Menu");
 
@@ -23,7 +37,6 @@ public class InformationMenu {
         title.setFont(Font.font("Arial", 28));
         title.setStyle("-fx-font-weight: bold;");
 
-        // Buttons
         Button loansButton = new Button("Loans");
         loansButton.setPrefSize(260, 40);
         loansButton.setFont(Font.font(16));
@@ -36,12 +49,10 @@ public class InformationMenu {
         backButton.setPrefSize(260, 36);
         backButton.setFont(Font.font(14));
 
-        // Navigate to other screens
+        // Navigation actions
         loansButton.setOnAction(e -> new LoanLevelsScreen().show(stage));
         creditButton.setOnAction(e -> new CreditLevelsScreen().show(stage));
-
-        // Back button returns to existing Floating Menu
-        backButton.setOnAction(e -> FloatingMenu.reopen(stage));
+        backButton.setOnAction(e -> new MainScreen().start(stage));
 
         VBox root = new VBox(20, title, loansButton, creditButton, backButton);
         root.setAlignment(Pos.CENTER);
