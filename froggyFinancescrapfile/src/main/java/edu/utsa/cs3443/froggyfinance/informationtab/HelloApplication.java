@@ -9,6 +9,7 @@ import javafx.stage.Stage;
  * This class initializes the program by launching JavaFX and delegating
  * the startup UI logic to {@link MainScreen}. It acts as the root
  * bootstrapper for the entire application.
+ * @author Victoria Baladez
  */
 public class HelloApplication extends Application {
 
