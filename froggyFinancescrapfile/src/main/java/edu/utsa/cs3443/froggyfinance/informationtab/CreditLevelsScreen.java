@@ -16,6 +16,7 @@ import javafx.stage.Stage;
  * related to the "Credit/Debit" topic. Users can navigate through chapters
  * using previous and next buttons, while the screen dynamically updates the
  * displayed title and paragraph.
+ * @author Victoria Baladez
  */
 public class CreditLevelsScreen {
 
