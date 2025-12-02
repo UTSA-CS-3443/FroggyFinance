@@ -13,6 +13,7 @@ import javafx.stage.Stage;
  * This is typically used in place of traditional dialog boxes to show short
  * alerts, notifications, or informational messages within the JavaFX
  * application.
+ * @author Victoria Baladez
  */
 public class StageHelper {
 
