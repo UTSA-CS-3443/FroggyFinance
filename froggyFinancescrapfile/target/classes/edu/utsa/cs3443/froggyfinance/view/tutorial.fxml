@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="20" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: beige;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.froggyfinance.controller.TutorialController">
+
+    <Label text="Welcome to Froggy Finance!" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+    <Label text="This tutorial will teach you the basics." wrapText="true" style="-fx-font-size: 16px;" />
+
+    <Label fx:id="tutorialText" text="Step 1: Explore the hub..." wrapText="true" style="-fx-font-size: 16px;" />
+
+    <Button text="Next" onAction="#handleNextStep"/>
+    <Button text="Done" onAction="#handleDone"/>
+</VBox>

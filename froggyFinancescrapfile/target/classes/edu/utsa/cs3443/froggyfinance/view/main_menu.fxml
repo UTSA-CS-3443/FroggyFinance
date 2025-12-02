@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="Anchorpane" styleClass="anchor-pane" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.utsa.cs3443.froggyfinance.controller.MainMenuController">
+
+    <children>
+        <VBox alignment="CENTER" layoutX="193.0" layoutY="50.0" spacing="20.0">
+            <Label style="-fx-font-size: 28px; -fx-font-weight: bold;" text="Froggy Finance!" />
+            <Button fx:id="startGameButton" onAction="#handleStartGame" prefWidth="200" text="Continue Game" />
+            <Button fx:id="settingsButton" onAction="#handleSettings" prefWidth="200" text="Settings" />
+            <Button fx:id="conceptArtButton" onAction="#handleConceptArt" prefWidth="200" text="Credits" />
+            <Button fx:id="backButton" onAction="#handleBack" prefWidth="200" text="Back to Menu" />
+        </VBox>
+    </children>
+
+</AnchorPane>
