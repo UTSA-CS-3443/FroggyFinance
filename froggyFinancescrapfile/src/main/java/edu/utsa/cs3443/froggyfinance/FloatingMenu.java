@@ -9,13 +9,28 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
+/**
+ * FloatingMenu
+ *
+ * Manages the floating in-game menu for the FroggyFinance application.
+ * Provides quick access to tools and features such as Calculator,
+ * Notepad, Tutorial, and Game Menu from anywhere in the game.
+ * 
+ * The menu is designed to be reusable and can reopen on the same
+ * stage, maintaining smooth navigation between screens.
+ *
+ * author: Sofia Flores
+ */
 public class FloatingMenu {
 
+    /** The Stage on which the Floating Menu is displayed. */
     private static Stage menuStage;
 
     /**
-     * Opens the floating menu on the given stage.
+     * Opens the Floating Menu on the provided stage.
      * Reuses the stage if already open.
+     *
+     * @param owner the stage to display the menu on
      */
     public static void open(Stage owner) {
         if (menuStage != null) {
@@ -71,10 +86,13 @@ public class FloatingMenu {
         menuStage.show();
     }
 
-
     /**
-     * Loads a new scene and passes the current scene to the controller if applicable.
-     * This allows the "Done"/Back button to return to the previous scene.
+     * Loads a new scene from FXML and passes the current scene to the controller.
+     * This allows controllers with a setPreviousScene method to return to the previous screen.
+     *
+     * @param stage the stage to display the new scene on
+     * @param fxmlPath the classpath location of the FXML file to load
+     * @param title the window title for the new scene
      */
     private static void loadSceneWithBack(Stage stage, String fxmlPath, String title) {
         try {
@@ -82,7 +100,7 @@ public class FloatingMenu {
             Scene currentScene = stage.getScene(); // save current scene
             Scene newScene = new Scene(loader.load());
 
-            // If controller has setPreviousScene, pass stage and previous scene
+            // Pass previous scene to controller if applicable
             Object controller = loader.getController();
             try {
                 controller.getClass()
@@ -98,26 +116,45 @@ public class FloatingMenu {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Returns the stage used by the Floating Menu.
+     *
+     * @return the Floating Menu stage
+     */
     public static Stage getMenuStage() {
         return menuStage;
     }
+
+    /**
+     * Returns the scene currently displayed by the Floating Menu.
+     *
+     * @return the current Floating Menu scene
+     */
     public static Scene getMenuScene() {
         return menuStage.getScene();
     }
 
+    /**
+     * Reopens the Floating Menu, rebuilding its scene if necessary.
+     *
+     * @param stage the stage to display the Floating Menu on
+     */
     public static void reopen(Stage stage) {
-        // If the menuStage already exists, force it to reload its scene
         if (menuStage == null) {
             menuStage = stage;
         }
-        // Clear any previous scene (optional, avoids visual glitches)
-        menuStage.setScene(null);
-
-        // Set up the Floating Menu scene again
+        menuStage.setScene(null); // Clear previous scene
         setupScene(menuStage);
     }
 
-    /** Extracted from open() for reuse */
+    /**
+     * Helper method to set up the Floating Menu scene.
+     *
+     * Extracted from open() to allow scene rebuilding when reopening the menu.
+     *
+     * @param stage the stage to display the menu on
+     */
     private static void setupScene(Stage stage) {
         stage.setTitle("MENU");
 
@@ -133,16 +170,10 @@ public class FloatingMenu {
         mainMenu.setStyle(buttonStyle);
         tutorial.setStyle(buttonStyle);
 
-        // Calculator button
+        // Button actions
         calculator.setOnAction(e -> loadSceneWithBack(stage, "/edu/utsa/cs3443/froggyfinance/hello-viewCalc.fxml", "Calculator"));
-
-        // Notepad button
         notepad.setOnAction(e -> new InformationMenu().show(stage));
-
-        // Main Menu button
         mainMenu.setOnAction(e -> MainMenuController.show(stage));
-
-        // Tutorial button
         tutorial.setOnAction(e -> loadSceneWithBack(stage, "/edu/utsa/cs3443/froggyfinance/view/tutorial.fxml", "Tutorial"));
 
         VBox root = new VBox(15, calculator, notepad, mainMenu, tutorial);
@@ -153,5 +184,4 @@ public class FloatingMenu {
         stage.setScene(scene);
         stage.show();
     }
-
 }
