@@ -9,6 +9,7 @@ import javafx.scene.text.Font;
  * <p>
  * It automatically applies a predefined font, weight, and padding to ensure
  * uniform visual appearance across different screens.
+ * @author Victoria Baladez
  */
 public class LabelHeader {
 
