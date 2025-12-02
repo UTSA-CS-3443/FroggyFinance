@@ -52,6 +52,7 @@ public class MainScreen {
 
         VBox root = new VBox(20, title, infoButton, exitButton);
         root.setAlignment(Pos.CENTER);
+        root.setStyle("-fx-padding: 30; -fx-background-color: linear-gradient(to bottom, #a0e3f0, #60c4d8); -fx-border-radius: 15; -fx-background-radius: 15;");
         root.setStyle(
             "-fx-padding: 30; " +
             "-fx-background-color: linear-gradient(to bottom, #a0e3f0, #60c4d8); " +
