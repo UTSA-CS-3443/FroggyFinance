@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.informationtab;
+package edu.utsa.cs3443.froggyfinance.informationtab;
 
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
@@ -26,6 +26,7 @@ public class LabelHeader {
         label.setFont(Font.font("Arial", 20));
         label.setStyle("-fx-font-weight: bold; -fx-padding: 6 0 10 0;");
     }
+    public Label getLabel() { return label; }
 
     /**
      * Returns the styled {@link Label} object created by this class.
