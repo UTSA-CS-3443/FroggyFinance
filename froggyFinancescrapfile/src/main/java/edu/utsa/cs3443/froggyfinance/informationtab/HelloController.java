@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
  * <p>
  * This controller responds to a button click by updating a label’s text.
  * It serves primarily as a template or placeholder controller.
+ * @author Victoria Baladez
  */
 public class HelloController {
 
