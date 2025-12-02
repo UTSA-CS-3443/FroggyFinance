@@ -8,21 +8,33 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
- * A simple content screen that displays a title and a content message.
- * Used as a placeholder or example for other screens.
+ * The {@code ContentScreen} class represents a simple JavaFX window used to
+ * display a title and a block of text content. It can function as a standalone
+ * message window or as a reusable screen template within the application.
  */
 public class ContentScreen {
 
+    /** The title displayed at the top of the content window. */
     private final String title;
+
+    /** The main content text to be shown in the window. */
     private final String content;
 
+    /**
+     * Constructs a new {@code ContentScreen} with the given title and content.
+     *
+     * @param title   the title text to be displayed at the top of the window
+     * @param content the body text to be displayed in the window
+     */
     public ContentScreen(String title, String content) {
         this.title = title;
         this.content = content;
     }
 
     /**
-     * Displays the content screen in a new JavaFX Stage.
+     * Displays the content screen in a new JavaFX {@link Stage}. This method
+     * constructs UI elements such as labels and a close button, arranges them
+     * in a vertical layout, and shows the window to the user.
      */
     public void show() {
         Stage stage = new Stage();
@@ -48,12 +60,18 @@ public class ContentScreen {
     }
 
     /**
-     * Static helper for quick message display (replaces old Swing dialogs).
+     * Convenience method that quickly displays a simple informational message
+     * in a {@code ContentScreen}. This serves as a JavaFX-based alternative to
+     * older Swing-based dialogs such as {@code JOptionPane.showMessageDialog}.
+     *
+     * @param title   the title to display on the window
+     * @param message the content message to show
      */
     public static void showInfo(String title, String message) {
         new ContentScreen(title, message).show();
     }
 }
+
 
 
 

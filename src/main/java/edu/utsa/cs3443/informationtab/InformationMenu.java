@@ -10,10 +10,26 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
- * Displays the main information tab with options for Loans and Credit/Debit.
+ * The {@code InformationMenu} class represents the main menu for the information
+ * section of the application. It provides navigation options for viewing
+ * educational content related to Loans or Credit/Debit, as well as a button to
+ * return to the main screen.
  */
 public class InformationMenu {
 
+    /**
+     * Displays the Information Menu screen inside the given JavaFX {@link Stage}.
+     * <p>
+     * This screen includes:
+     * <ul>
+     *     <li>A header label displaying the menu title</li>
+     *     <li>A button to navigate to the Loans content</li>
+     *     <li>A button to navigate to the Credit/Debit content</li>
+     *     <li>A back button returning to the application's main screen</li>
+     * </ul>
+     *
+     * @param stage the stage in which this menu should be displayed
+     */
     public void show(Stage stage) {
         stage.setTitle("Information Menu");
 
@@ -33,6 +49,7 @@ public class InformationMenu {
         backButton.setPrefSize(260, 36);
         backButton.setFont(Font.font(14));
 
+        // Navigation actions
         loansButton.setOnAction(e -> new LoanLevelsScreen().show(stage));
         creditButton.setOnAction(e -> new CreditLevelsScreen().show(stage));
         backButton.setOnAction(e -> new MainScreen().start(stage));
@@ -47,6 +64,7 @@ public class InformationMenu {
         stage.show();
     }
 }
+
 
 
 
