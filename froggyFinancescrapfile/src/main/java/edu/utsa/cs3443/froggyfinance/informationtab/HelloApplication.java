@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.informationtab;
+package edu.utsa.cs3443.froggyfinance.informationtab;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
