@@ -19,6 +19,7 @@ import javafx.stage.Stage;
  * Users can navigate between levels using the Next/Previous buttons, or return
  * to the main information menu using the Back button. This class mirrors the
  * behavior of {@link CreditLevelsScreen} but is dedicated to loan-related content.
+ * @author Victoria Baladez
  */
 public class LoanLevelsScreen {
 
