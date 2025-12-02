@@ -6,6 +6,7 @@ package edu.utsa.cs3443.froggyfinance.informationtab;
  * <p>
  * It stores predefined chapter titles and paragraph content for each topic
  * and provides methods to retrieve titles, paragraphs, and paragraph counts.
+ * @author Victoria Baladez
  */
 public class ContentManager {
 
