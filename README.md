@@ -2,14 +2,14 @@
 Project for App-titude!
 
 ## **Motivation**
-Froggy Finance is built to help younger people (upperclassmen in high school/ starting college students)  have a better understanding of their financial decisions and the impacts of those decisions on their lives. Help to improve their financial literacy skills. Using a game to help younger people practice/ quiz on the basics of finance with credit cards, debit cards, prepaid cards and loans.
+Froggy Finance is built to help younger people (upperclassmen in high school/ starting college students)  have a better understanding of their financial decisions and the impacts of those decisions on their lives. Help to improve their financial literacy skills. Using a game to help younger people practice/ quiz on the basics of finance with credit cards, debit cards, prepaid cards and loans. We felt that learning about these financial aspects are expected when going into adulthood but seldom taught properly. The main motivation behind our app is to give our audience the materials they need to familiarize themselves with financial concepts in a fun manner.
 
 
 ## **Code Style**
 The language used to write this app is **Java** with **JavaFX** for screen layouts.
 
 ## **Video Demonstration**
-https://drive.google.com/file/d/1SBjNvkt3oflks2rJ_CCvgVACuz6zp9tV/view?usp=sharing
+[FroggyFinance Demo Video]()
 
 ## **UML Diagram**
 <img>
@@ -18,7 +18,7 @@ https://drive.google.com/file/d/1SBjNvkt3oflks2rJ_CCvgVACuz6zp9tV/view?usp=shari
 We used **Intellij** to code this app, **GitHub** for version control, and **JavaFX** for designing the user interface layouts.
 
 ## **Features**
--
+- Information tab provides a book like experience in chapters based off bosses/ levels that you can go through to grasp a better idea on loans and credit/debit and prepares you for the game aspect quesstions.
 - Allows you to watch a tutorial/change volume/use a calculator/ review and study for the levels in-game, all through the main menu and game menu.
 - **Froggy Finance Game** to test your knowledge on finance topics.
 
@@ -32,11 +32,12 @@ We used **Intellij** to code this app, **GitHub** for version control, and **Jav
 
 ## **How to use**
 This app is easy to use and user friendly.
-1. **Steps to get around**
-2. **Game Play** Use arrow keys to get to Toad hut and bank, when in hut or bank use spacebar to start questions after dialog has been read. To answer question, use keys a or b. to get to next level move sprite to bottom right of screen. To go back a level move sprite to top left of screen.
+1. **Steps to get around** 
+2. **Calculator** 
+3. **Information Tab** On the main screen the notepad takes you to another page labeled "Information Tab" where you can read chapters of information on loans and credit/debit for each level to help you later answer the questions. I would recommend to find read through the information page, then do the tutorial, and then play the game for a smooth experience.
+4. **Game Play** Use arrow keys to get to Toad hut and bank, when in hut or bank use spacebar to start questions after dialog has been read. To answer question, use keys a or b. to get to next level move sprite to bottom right of screen. To go back a level move sprite to top left of screen.
 
 ## **Credits**
-Erika Mey 
-Sofia Flores
-Lauren Hinnen
-Project Froggy Finance Game.
+Erika Mey - Project Froggy Finance Game.
+Sofia Flores - Project Froggy Finance Main Screens.
+Victoria Baladez - Project Froggy Finance Information Tab.
