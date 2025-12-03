@@ -3,7 +3,7 @@ package edu.utsa.cs3443.froggyfinance;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class Application extends Application {
+public class GameApplication extends Application {
 
     @Override
     public void start(Stage stage) {
