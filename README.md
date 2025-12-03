@@ -28,7 +28,7 @@ We used **Intellij** to code this app, **GitHub** for version control, and **Jav
 ## **Installation**
 1. Clone or download the project repository.
 2. Open the project in intellij.
-3. Build and run the project from HelloApplication.java.
+3. Build and run the project from GameApplication.java.
 
 ## **How to use**
 This app is easy to use and user friendly.
