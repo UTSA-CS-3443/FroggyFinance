@@ -26,6 +26,12 @@ B: False
 ANSWER: B
 
 
+Q: If you buy a car for $10,000 and use an Auto Loan to pay for it, the loan amount would be $10,000.
+A: True
+B: False
+ANSWER: A
+
+
 Q: Credit Cards are a type of loan.
 A: True
 B: False
@@ -57,6 +63,12 @@ ANSWER: A
 
 
 Q: Does a prepaid card have money loaded onto it without being linked to a bank account or credit line?
+A: True
+B: False
+ANSWER: A
+
+
+Q: Liam wants to buy a video game that costs $60. If he uses a prepaid card that already has $100 on it, he will have $40 left on the card after buying the game.
 A: True
 B: False
 ANSWER: A
@@ -95,6 +107,12 @@ B: False
 ANSWER: A
 
 
+Q. Jayden has a credit card with a limit of $500. He uses it to buy: $120 on clothes, $200 on electronics, $50 on food. If he tries to buy a concert ticket for $150, will the purchase go through? 
+A: True
+B: False
+ANSWER: B
+
+
 Q: The Simple Interest Formula is: Interest = Principal x Rate x Time.
 A: True
 B: False
@@ -120,6 +138,12 @@ ANSWER: A
 
 
 Q: Variable-rate loans have an interest rate that never changes.
+A: True
+B: False
+ANSWER: B
+
+
+Q: You invest $1,200 at a 4% annual interest rate for 3 years. Using the Simple Interest formula, the interest earned would be $160.
 A: True
 B: False
 ANSWER: B
@@ -154,6 +178,12 @@ Q: You can only take out one loan at a time.
 A: True
 B: False
 ANSWER: B
+
+
+Q: You take out a secured car loan for $10,000 at a 5% annual interest rate for 3 years. If you got an unsecured loan at 8%, the interest would be $2,400.
+A: True
+B: False
+ANSWER: A
 
 
 Q: If your prepaid card has a balance of $60 dollars, you can purchase an item with it that is worth $65 dollars.
@@ -369,4 +399,5 @@ Q: Does a prepaid card have money loaded onto it without being linked to a bank 
 A: True
 B: False
 ANSWER: A
+
 
