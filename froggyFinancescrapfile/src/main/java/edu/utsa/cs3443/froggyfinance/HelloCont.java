@@ -12,6 +12,7 @@ import javafx.stage.Stage;
  * This class manages all button interactions, maintains calculator state,
  * performs arithmetic operations, and updates the display field accordingly.
  * </p>
+ * @author Lauren Hinnen
  */
 public class HelloCont {
 
