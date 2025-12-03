@@ -9,7 +9,7 @@ Froggy Finance is built to help younger people (upperclassmen in high school/ st
 The language used to write this app is **Java** with **JavaFX** for screen layouts.
 
 ## **Video Demonstration**
-[FroggyFinance Demo Video]()
+https://drive.google.com/file/d/1SBjNvkt3oflks2rJ_CCvgVACuz6zp9tV/view?usp=sharing
 
 ## **UML Diagram**
 <img>
@@ -38,4 +38,5 @@ This app is easy to use and user friendly.
 ## **Credits**
 Erika Mey 
 Sofia Flores
+Lauren Hinnen
 Project Froggy Finance Game.
