@@ -23,6 +23,7 @@ We used **Intellij** to code this app, **GitHub** for version control, and **Jav
 
 ## **Known Issues**
 - First question on toad level and mantis level will track wrong even when right and score will track as wrong one point.
+- Background sound will distort after leaving first screen.
 
 ## **Installation**
 1. Clone or download the project repository.
