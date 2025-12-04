@@ -60,7 +60,7 @@ public class MainMenuController {
 
         // Button actions
         startGame.setOnAction(e -> {
-            Scene gameScene = GamePanel.createGameScene(stage, false);
+            Scene gameScene = GamePanel.createGameScene(stage, true);
             stage.setScene(gameScene);
             stage.setTitle("Froggy Finance");
         });
