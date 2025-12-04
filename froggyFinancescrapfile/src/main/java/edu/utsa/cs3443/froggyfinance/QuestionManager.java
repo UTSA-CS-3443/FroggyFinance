@@ -135,8 +135,8 @@ public class QuestionManager {
      * handles the questions, sound and right wrong answer dialog
      */
     private void handleQuestionInput() {
-        keyHandler.aPressed = false;
-        keyHandler.bPressed = false;
+        boolean aWasPressed = keyHandler.aPressed;
+        boolean bWasPressed = keyHandler.bPressed;
         if (!questionBox.isVisible() || currentIndex >= questions.size()) {
             state = State.FINISHED;
             return;
@@ -147,8 +147,8 @@ public class QuestionManager {
             String selected = keyHandler.aPressed ? "A" : "B";
 
             boolean correct = selected.equalsIgnoreCase(current.getCorrectAnswer());
-            boolean aWasPressed = keyHandler.aPressed;
-            boolean bWasPressed = keyHandler.bPressed;
+            keyHandler.aPressed = false;
+            keyHandler.bPressed = false;
 
                 if (correct) {
                     gameState.incrementCorrect();
